@@ -89,7 +89,7 @@ class ZooKeeper
     public function __construct($hostList, $timeout = null)
     {
         if (!is_null($timeout) && is_numeric($timeout)) {
-            $this->zookeeper = new \ZooKeeper($hostList, null, $timeout);
+            $this->zookeeper = new \Zookeeper($hostList, null, $timeout);
         } else {
             $this->zookeeper = new \Zookeeper($hostList);
         }
